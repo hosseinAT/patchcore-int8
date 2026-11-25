@@ -1,0 +1,61 @@
+{
+ "env": {
+  "date": "2026-11-25",
+  "device": "cuda (x86_64)",
+  "torch": "2.14.1+cu130",
+  "anomalib": "2.7.1",
+  "smoke_test": false
+ },
+ "args": {
+  "root": "['datasets', '/kaggle/input', '/content/datasets']",
+  "categories": "['bottle', 'carpet', 'screw']",
+  "size": "256",
+  "coreset": "0.1",
+  "calib_images": "32",
+  "max_train": "None",
+  "max_test": "None",
+  "timing_runs": "15",
+  "out": "results",
+  "readme": "README.md",
+  "smoke_test": "False"
+ },
+ "summary": {
+  "categories": [
+   "bottle",
+   "carpet",
+   "screw"
+  ],
+  "mean": {
+   "fp32": {
+    "image_auroc": 0.9858815545949813,
+    "pixel_auroc": 0.9883216411422457
+   },
+   "int8": {
+    "image_auroc": 0.9785173866751414,
+    "pixel_auroc": 0.9872845468098711
+   },
+   "int8_mixed": {
+    "image_auroc": 0.952624102532216,
+    "pixel_auroc": 0.9595401540675742
+   },
+   "int8_bank_fp16": {
+    "image_auroc": 0.9784490666642103,
+    "pixel_auroc": 0.9872846410221706
+   },
+   "int8_bank_int8": {
+    "image_auroc": 0.9782441066314166,
+    "pixel_auroc": 0.9872805902962729
+   }
+  },
+  "latency_ms_cpu": {
+   "backbone_fp32": 369.7521199999301,
+   "backbone_int8": 175.91588900017996,
+   "knn_fp32_bank": 1327.9355820000092
+  },
+  "model_bytes": {
+   "backbone_fp32": 99691387,
+   "backbone_int8": 25305219
+  },
+  "feature_rel_error_int8": 0.18952317234843669
+ }
+}

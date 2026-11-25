@@ -1,0 +1,11 @@
+This project uses anomalib (https://github.com/open-edge-platform/anomalib),
+Copyright (C) Intel Corporation, licensed under the Apache License 2.0, as a
+dependency. The PatchCore model, the k-center-greedy coreset, the nearest-
+neighbour scoring and the anomaly-map generation are anomalib's implementation.
+No anomalib source code is copied into this repository.
+
+PatchCore: K. Roth et al., "Towards Total Recall in Industrial Anomaly
+Detection", CVPR 2022.
+
+MVTec AD is distributed by MVTec Software GmbH under CC BY-NC-SA 4.0 and is
+not included in this repository.
